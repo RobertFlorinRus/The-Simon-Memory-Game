@@ -1,0 +1,122 @@
+/* Tested and working on Chrome ver. 122.0.6261.112 on windows 10 */
+body {
+  background-color: #99dde4;
+}
+/* Main container style */
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  padding: 10px;
+  width: 500px; 
+  height: 500px; 
+  position: relative;
+  display: flex; 
+  align-items: center; 
+}
+
+/* Base style for all circle buttons */
+.greencircle, .redcircle, .yellowcircle, .bluecircle {
+  position: absolute;
+  border-radius: 50%; 
+  width: 175px; 
+  height: 175px; 
+  border: 10px solid #0f0f0f; 
+  z-index: 1; /* Ensure they are above the background */
+  transition: transform 0.4s, filter 0.4s; /* Smooth transition for flash effect */
+}
+
+/* Individual color and placement styles */
+.greencircle {
+  top: 0;
+  background: #00ff0d; 
+}
+
+.redcircle {
+  top: 0;
+  right: 0;
+  background: #ff0000; 
+}
+
+.yellowcircle {
+  bottom: 0;
+  left: 0;
+  background: #eaff00; 
+}
+
+.bluecircle {
+  bottom: 0;
+  right: 0;
+  background: #1100ff; 
+}
+
+/* Style for the central black circle */
+.blackcircle {
+  position: relative;
+  left: 40px; 
+  top: 40px; 
+  align-items: center; 
+  border-radius: 50%; 
+  width: 420px; 
+  height: 420px; 
+  background: #0a0a0a; 
+  margin-bottom: 70px; 
+}
+
+/* Start button style */
+.startButton {
+  position: absolute;
+  background-color: rgb(194, 192, 192); 
+  width: 70px; 
+  height: 50px; 
+  left: 175px; 
+  top: 190px; 
+  border-radius: 15px; 
+}
+
+/* High score and current score displays */
+.highScore, .currentscore {
+  text-align: center; 
+  line-height: 50px; 
+  position: absolute;
+  background-color: rgb(194, 192, 192); 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 15px; 
+}
+
+/* Position high score */
+.highScore {
+  left: 120px; 
+  top: 190px;
+}
+
+/* Position current score */
+.currentscore {
+  left: 250px; 
+  top: 190px;
+}
+
+/* Game status indicator style */
+.statusIndicator {
+  position: absolute;
+  top: 250px;
+  left: 203px;
+  border-radius: 50%; /* Make it circular */
+  width: 10px; 
+  height: 10px; 
+  background-color: red;
+}
+
+/* Font style for buttons and scores */
+.startButton,
+.highScore,
+.currentscore {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Active class for flashing effect */
+.active {
+  filter: brightness(20%); /* Make the button less bright */
+}
